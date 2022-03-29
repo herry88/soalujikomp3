@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth', 'level']], function () {
 
     Route::resource('do_transaction', \App\Http\Controllers\DoTransactionController::class);
     Route::resource('invoice',\App\Http\Controllers\InvoiceController::class);
+    Route::resource('laporan', \App\Http\Controllers\LaporanController::class);
 });
 
 Route::group(['middleware' => ['auth', 'levelkasir']], function () {
@@ -40,6 +41,8 @@ Route::group(['middleware' => ['auth', 'levelkasir']], function () {
 
     Route::resource('do_transaction', \App\Http\Controllers\DoTransactionController::class);
     Route::resource('invoice',\App\Http\Controllers\InvoiceController::class);
+
+
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
