@@ -9,4 +9,14 @@ class TransaksiHeader extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    /**
+     * Get the kasir that owns the TransaksiHeader
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function kasir()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

@@ -58,9 +58,9 @@
                         </a>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('laporan.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-th-large"></i>
-                            <p>Order</p>
+                            <p>Laporan Transaksi</p>
                         </a>
                     </li>
                     <li class="nav-item has-treeview">
